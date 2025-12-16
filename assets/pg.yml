@@ -1,0 +1,721 @@
+games:
+  - gameId: 3
+    name: 横财来啦
+    name_en: Fortune Gods
+    name_pt: Fortune Gods
+    api: "fortune-gods"
+  - gameId: 7
+    name: "美杜莎: 雅典娜的诅咒"
+    name_en: "Medusa 1: The Curse of Athena"
+    name_pt: "Medusa 1: The Curse of Athena"
+    api: medusa
+  - gameId: 20
+    name: 亲爱的
+    name_en: Reel Love
+    name_pt: Reel Love
+    api: "reel-love"
+  - gameId: 25
+    name: 抓抓乐
+    name_en: Plushie Frenzy
+    name_pt: Plushie Frenzy
+    api: "plushie-frenzy"
+  - gameId: 29
+    name: 鱼跃龙门
+    name_en: Dragon Legend
+    name_pt: Dragon Legend
+    api: "dragon-legend"
+  - gameId: 33
+    name: 嘻哈熊猫
+    name_en: Hip Hop Panda
+    name_pt: Hip Hop Panda
+    api: "hip-hop-panda"
+  - gameId: 34
+    name: 后羿射日
+    name_en: Legend of Hou Yi
+    name_pt: Legend of Hou Yi
+    api: "legend-of-hou-yi"
+  - gameId: 35
+    name: 万胜狂欢夜
+    name_en: "Mr. Hallow-Jackpot!"
+    name_pt: "Mr. Hallow-Jackpot!"
+    api: "mr-hallow-jp"
+  - gameId: 36
+    name: 舞狮进宝
+    name_en: Prosperity Lion
+    name_pt: Prosperity Lion
+    api: "prosperity-lion"
+  - gameId: 37
+    name: 圣诞欢乐送
+    name_en: Santa's Gift Rush
+    name_pt: Santa's Gift Rush
+    api: "santas-gift-rush"
+  - gameId: 38
+    name: "宝石侠 - 大宝剑"
+    name_en: Gem Saviour Sword
+    name_pt: Gem Saviour Sword
+    api: "gem-saviour-sword"
+  - gameId: 39
+    name: 金猪报财
+    name_en: Piggy Gold
+    name_pt: Piggy Gold
+    api: "piggy-gold"
+  - gameId: 40
+    name: 水果丛林
+    name_en: Jungle Delight
+    name_pt: Jungle Delight
+    api: "jungle-delight"
+  - gameId: 42
+    name: 象财神
+    name_en: Ganesha Gold
+    name_pt: Ganesha Gold
+    api: "ganesha-gold"
+  - gameId: 44
+    name: 皇上吉祥
+    name_en: Emperor's Favour
+    name_pt: Emperor's Favour
+    api: "emperors-favour"
+  - gameId: 48
+    name: 双囍临门
+    name_en: Double Fortune
+    name_pt: Double Fortune
+    api: "double-fortune"
+  - gameId: 50
+    name: 嘻游记
+    name_en: Journey to the Wealth
+    name_pt: Journey to the Wealth
+    api: "journey-to-the-wealth"
+  - gameId: 53
+    name: 冰雪大冲关
+    name_en: The Great Icescape
+    name_pt: The Great Icescape
+    api: "the-great-icescape"
+  - gameId: 54
+    name: 赏金船长
+    name_en: Captain's Bounty
+    name_pt: Captain's Bounty
+    api: "captains-bounty"
+  - gameId: 57
+    name: 寻龙探宝
+    name_en: Dragon Hatch
+    name_pt: Dragon Hatch
+    api: "dragon-hatch"
+  - gameId: 58
+    name: 德古拉女爵
+    name_en: Vampire's Charm
+    name_pt: Vampire's Charm
+    api: "vampires-charm"
+  - gameId: 59
+    name: 忍者vs武侍
+    name_en: Ninja vs Samurai
+    name_pt: Ninja vs Samurai
+    api: "ninja-vs-samurai"
+  - gameId: 60
+    name: 爱尔兰精灵
+    name_en: Leprechaun Riches
+    name_pt: Leprechaun Riches
+    api: "leprechaun-riches"
+  - gameId: 61
+    name: 唐伯虎点秋香
+    name_en: Flirting Scholar
+    name_pt: Flirting Scholar
+    api: "flirting-scholar"
+  - gameId: 62
+    name: "宝石侠 - 宝藏征途"
+    name_en: Gem Saviour Conquest
+    name_pt: Gem Saviour Conquest
+    api: "gem-saviour-conquest"
+  - gameId: 63
+    name: 龙虎争霸
+    name_en: Dragon Tiger Luck
+    name_pt: Dragon Tiger Luck
+    api: "dragon-tiger-luck"
+  - gameId: 64
+    name: 拳霸
+    name_en: Muay Thai Champion
+    name_pt: Muay Thai Champion
+    api: "muay-thai-champion"
+  - gameId: 65
+    name: 麻将胡了
+    name_en: Mahjong Ways
+    name_pt: Mahjong Ways
+    api: "mahjong-ways"
+  - gameId: 67
+    name: 少林足球
+    name_en: Shaolin Soccer
+    name_pt: Shaolin Soccer
+    api: "shaolin-soccer"
+  - gameId: 68
+    name: 鼠鼠福福
+    name_en: Fortune Mouse
+    name_pt: Fortune Mouse
+    api: "fortune-mouse"
+  - gameId: 69
+    name: 比基尼天堂
+    name_en: Bikini Paradise
+    name_pt: Bikini Paradise
+    api: "bikini-paradise"
+  - gameId: 70
+    name: 糖果连连爆
+    name_en: Candy Burst
+    name_pt: Candy Burst
+    api: "candy-burst"
+  - gameId: 71
+    name: 赢财神
+    name_en: Cai Shen Wins
+    name_pt: Cai Shen Wins
+    api: "cai-shen-wins"
+  - gameId: 73
+    name: 埃及探秘宝典
+    name_en: Egypt's Book of Mystery
+    name_pt: Egypt's Book of Mystery
+    api: "egypts-book-mystery"
+  - gameId: 74
+    name: 麻将胡了2
+    name_en: Mahjong Ways 2
+    name_pt: Mahjong Ways 2
+    api: "mahjong-ways2"
+  - gameId: 75
+    name: 福运象财神
+    name_en: Ganesha Fortune
+    name_pt: Ganesha Fortune
+    api: "ganesha-fortune"
+  - gameId: 79
+    name: 澳门壕梦
+    name_en: Dreams of Macau
+    name_pt: Dreams of Macau
+    api: "dreams-of-macau"
+  - gameId: 80
+    name: 欢乐嘉年华
+    name_en: Circus Delight
+    name_pt: Circus Delight
+    api: "circus-delight"
+  - gameId: 82
+    name: 凤凰传奇
+    name_en: Phoenix Rises
+    name_pt: Phoenix Rises
+    api: "phoenix-rises"
+  - gameId: 83
+    name: 火树赢花
+    name_en: Wild Fireworks
+    name_pt: Wild Fireworks
+    api: "wild-fireworks"
+  - gameId: 84
+    name: 赏金女王
+    name_en: Queen of Bounty
+    name_pt: Queen of Bounty
+    api: "queen-bounty"
+  - gameId: 85
+    name: 阿拉丁神灯
+    name_en: Genie's 3 Wishes
+    name_pt: Genie's 3 Wishes
+    api: "genies-wishes"
+  - gameId: 86
+    name: 星旅淘金
+    name_en: Galactic Gems
+    name_pt: Galactic Gems
+    api: "galactic-gems"
+  - gameId: 87
+    name: 寻宝黄金城
+    name_en: Treasures of Aztec
+    name_pt: Treasures of Aztec
+    api: "treasures-aztec"
+  - gameId: 88
+    name: 金玉满堂
+    name_en: Jewels of Prosperity
+    name_pt: Jewels of Prosperity
+    api: "jewels-prosper"
+  - gameId: 89
+    name: 招财喵
+    name_en: Lucky Neko
+    name_pt: Lucky Neko
+    api: "lucky-neko"
+  - gameId: 91
+    name: 冰火双娇
+    name_en: Guardians of Ice & Fire
+    name_pt: Guardians of Ice & Fire
+    api: "gdn-ice-fire"
+  - gameId: 92
+    name: 水上泰神奇
+    name_en: Thai River Wonders
+    name_pt: Thai River Wonders
+    api: "thai-river"
+  - gameId: 93
+    name: 新国粹
+    name_en: Opera Dynasty
+    name_pt: Opera Dynasty
+    api: "opera-dynasty"
+  - gameId: 94
+    name: 巴厘之旅
+    name_en: Bali Vacation
+    name_pt: Bali Vacation
+    api: "bali-vacation"
+  - gameId: 95
+    name: 宝石传奇
+    name_en: Majestic Treasures
+    name_pt: Majestic Treasures
+    api: "majestic-ts"
+  - gameId: 97
+    name: 冰锋奇侠
+    name_en: Jack Frost's Winter
+    name_pt: Jack Frost's Winter
+    api: "jack-frosts"
+  - gameId: 98
+    name: 十倍金牛
+    name_en: Fortune Ox
+    name_pt: Fortune Ox
+    api: "fortune-ox"
+  - gameId: 100
+    name: 糖心风暴
+    name_en: Candy Bonanza
+    name_pt: Candy Bonanza
+    api: "candy-bonanza"
+  - gameId: 101
+    name: 太阳神传说
+    name_en: Rise of the Sun God
+    name_pt: Rise of the Sun God
+    api: "rise-sun-god"
+  - gameId: 102
+    name: 人鱼公主
+    name_en: Mermaid Riches
+    name_pt: Mermaid Riches
+    api: "mermaid-riches"
+  - gameId: 103
+    name: 比特淘金
+    name_en: Crypto Gold
+    name_pt: Crypto Gold
+    api: "crypto-gold"
+  - gameId: 104
+    name: 亡灵大盗
+    name_en: Wild Bandito
+    name_pt: Wild Bandito
+    api: "wild-bandito"
+  - gameId: 105
+    name: 霹雳神偷
+    name_en: Heist Stakes
+    name_pt: Heist Stakes
+    api: "heist-stakes"
+  - gameId: 106
+    name: 麒麟送宝
+    name_en: Ways of the Qilin
+    name_pt: Ways of the Qilin
+    api: "ways-of-qilin"
+  - gameId: 107
+    name: 美猴王传奇
+    name_en: Legendary Monkey King
+    name_pt: Legendary Monkey King
+    api: "lgd-monkey-kg"
+  - gameId: 108
+    name: 美洲野牛
+    name_en: Buffalo Win
+    name_pt: Buffalo Win
+    api: "buffalo-win"
+  - gameId: 110
+    name: 恐龙帝国
+    name_en: Jurassic Kingdom
+    name_pt: Jurassic Kingdom
+    api: "jurassic-kdm"
+  - gameId: 112
+    name: 江山美景图
+    name_en: Oriental Prosperity
+    name_pt: Oriental Prosperity
+    api: "oriental-pros"
+  - gameId: 113
+    name: 丽影奇兵之探秘埃及
+    name_en: Raider Jane's Crypt of Fortune
+    name_pt: Raider Jane's Crypt of Fortune
+    api: "crypt-fortune"
+  - gameId: 114
+    name: 钞级表情包
+    name_en: Emoji Riches
+    name_pt: Emoji Riches
+    api: "emoji-riches"
+  - gameId: 115
+    name: 超市大血拼
+    name_en: Supermarket Spree
+    name_pt: Supermarket Spree
+    api: "sprmkt-spree"
+  - gameId: 117
+    name: 夜醉佳人
+    name_en: Cocktail Nights
+    name_pt: Cocktail Nights
+    api: "cocktail-nite"
+  - gameId: 118
+    name: 假面嘉年华
+    name_en: Mask Carnival
+    name_pt: Mask Carnival
+    api: "mask-carnival"
+  - gameId: 119
+    name: 百鬼夜行
+    name_en: Spirited Wonders
+    name_pt: Spirited Wonders
+    api: "spirit-wonder"
+  - gameId: 120
+    name: 韩宫御宴
+    name_en: The Queen's Banquet
+    name_pt: The Queen's Banquet
+    api: "queen-banquet"
+  - gameId: 121
+    name: 日月星辰
+    name_en: Destiny of Sun & Moon
+    name_pt: Destiny of Sun & Moon
+    api: "dest-sun-moon"
+  - gameId: 122
+    name: 神鹰宝石
+    name_en: Garuda Gems
+    name_pt: Garuda Gems
+    api: "garuda-gems"
+  - gameId: 123
+    name: 斗鸡
+    name_en: Rooster Rumble
+    name_pt: Rooster Rumble
+    api: "rooster-rbl"
+  - gameId: 124
+    name: 绝地大逃杀
+    name_en: Battleground Royale
+    name_pt: Battleground Royale
+    api: battleground
+  - gameId: 125
+    name: 蝶恋花
+    name_en: Butterfly Blossom
+    name_pt: Butterfly Blossom
+    api: "btrfly-blossom"
+  - gameId: 126
+    name: 虎虎生财
+    name_en: Fortune Tiger
+    name_pt: Fortune Tiger
+    api: "fortune-tiger"
+  - gameId: 127
+    name: 极速赢家
+    name_en: Speed Winner
+    name_pt: Speed Winner
+    api: "speed-winner"
+  - gameId: 128
+    name: 珀尔修斯传奇
+    name_en: Legend of Perseus
+    name_pt: Legend of Perseus
+    api: "legend-perseus"
+  - gameId: 129
+    name: 发财鱼虾蟹
+    name_en: Win Win Fish Prawn Crab
+    name_pt: Win Win Fish Prawn Crab
+    api: "win-win-fpc"
+  - gameId: 130
+    name: 电玩金猪
+    name_en: Lucky Piggy
+    name_pt: Lucky Piggy
+    api: "lucky-piggy"
+  - gameId: 132
+    name: 疯赚过山车
+    name_en: Wild Coaster
+    name_pt: Wild Coaster
+    api: "wild-coaster"
+  - gameId: 135
+    name: 赏金大对决
+    name_en: Wild Bounty Showdown
+    name_pt: Wild Bounty Showdown
+    api: "wild-bounty-sd"
+  - gameId: 1312883
+    name: 黄金摇钱树
+    name_en: Prosperity Fortune Tree
+    name_pt: Prosperity Fortune Tree
+    api: "prosper-ftree"
+  - gameId: 1338274
+    name: 图腾奇迹
+    name_en: Totem Wonders
+    name_pt: Totem Wonders
+    api: "totem-wonders"
+  - gameId: 1340277
+    name: 维京纪元
+    name_en: Asgardian Rising
+    name_pt: Asgardian Rising
+    api: "asgardian-rs"
+  - gameId: 1368367
+    name: 炼金工坊
+    name_en: Alchemy Gold
+    name_pt: Alchemy Gold
+    api: "alchemy-gold"
+  - gameId: 1372643
+    name: 美食美刻
+    name_en: Diner Delights
+    name_pt: Diner Delights
+    api: "diner-delights"
+  - gameId: 1381200
+    name: 夏威夷探奇
+    name_en: Hawaiian Tiki
+    name_pt: Hawaiian Tiki
+    api: "hawaiian-tiki"
+  - gameId: 1397455
+    name: 水果甜心
+    name_en: Fruity Candy
+    name_pt: Fruity Candy
+    api: "fruity-candy"
+  - gameId: 1402846
+    name: 点石成金
+    name_en: Midas Fortune
+    name_pt: Midas Fortune
+    api: "midas-fortune"
+  - gameId: 1418544
+    name: 烘焙总动员
+    name_en: Bakery Bonanza
+    name_pt: Bakery Bonanza
+    api: "bakery-bonanza"
+  - gameId: 1420892
+    name: 电音派对
+    name_en: Rave Party Fever
+    name_pt: Rave Party Fever
+    api: "rave-party-fvr"
+  - gameId: 1432733
+    name: 元素精灵
+    name_en: Mystical Spirits
+    name_pt: Mystical Spirits
+    api: "myst-spirits"
+  - gameId: 1448762
+    name: 泰嗨泼水节
+    name_en: Songkran Splash
+    name_pt: Songkran Splash
+    api: "songkran-spl"
+  - gameId: 1451122
+    name: 寻龙探宝2
+    name_en: Dragon Hatch2
+    name_pt: Dragon Hatch2
+    api: "dragon-hatch2"
+  - gameId: 1473388
+    name: 皇家游轮
+    name_en: Cruise Royale
+    name_pt: Cruise Royale
+    api: "cruise-royale"
+  - gameId: 1489936
+    name: 金球射手
+    name_en: Ultimate Striker
+    name_pt: Ultimate Striker
+    api: "ult-striker"
+  - gameId: 1492288
+    name: 墨西哥狂欢
+    name_en: Pinata Wins
+    name_pt: Pinata Wins
+    api: "pinata-wins"
+  - gameId: 1508783
+    name: "猿宇宙#3258"
+    name_en: "Wild Ape #3258"
+    name_pt: "Wild Ape #3258"
+    api: "wild-ape-3258"
+  - gameId: 1513328
+    name: 超级高尔夫
+    name_en: Super Golf Drive
+    name_pt: Super Golf Drive
+    api: "spr-golf-drive"
+  - gameId: 1529867
+    name: 忍者小浣熊
+    name_en: Ninja Raccoon Frenzy
+    name_pt: Ninja Raccoon Frenzy
+    api: "ninja-raccoon"
+  - gameId: 1543462
+    name: 金钱兔
+    name_en: Fortune Rabbit
+    name_pt: Fortune Rabbit
+    api: "fortune-rabbit"
+  - gameId: 1555350
+    name: 铸造大师
+    name_en: Forge of Wealth
+    name_pt: Forge of Wealth
+    api: "forge-wealth"
+  - gameId: 1568554
+    name: 怪盗神偷
+    name_en: Wild Heist Cashout
+    name_pt: Wild Heist Cashout
+    api: "wild-heist-co"
+  - gameId: 1572362
+    name: 角斗士荣耀
+    name_en: Gladiator's Glory
+    name_pt: Gladiator's Glory
+    api: "gladi-glory"
+  - gameId: 1580541
+    name: 黑帮风云
+    name_en: Mafia Mayhem
+    name_pt: Mafia Mayhem
+    api: "mafia-mayhem"
+  - gameId: 1594259
+    name: 非洲大冒险
+    name_en: Safari Wilds
+    name_pt: Safari Wilds
+    api: "safari-wilds"
+  - gameId: 1601012
+    name: 幸运草之恋
+    name_en: Lucky Clover Riches
+    name_pt: Lucky Clover Riches
+    api: "lucky-clover"
+  - gameId: 1615454
+    name: 狼人传奇
+    name_en: Werewolf's Hunt
+    name_pt: Werewolf's Hunt
+    api: "werewolf-hunt"
+  - gameId: 1623475
+    name: 阿努比斯
+    name_en: Anubis Wrath
+    name_pt: Anubis Wrath
+    api: "anubis-wrath"
+  - gameId: 1635221
+    name: 丧尸危机
+    name_en: Zombie Outbreak
+    name_pt: Zombie Outbreak
+    api: "zombie-outbrk"
+  - gameId: 1648578
+    name: 鲨鱼赏金
+    name_en: Shark Bounty
+    name_pt: Shark Bounty
+    api: "shark-bounty"
+  - gameId: 1655268
+    name: 沙皇宝藏
+    name_en: Tsar Treasures
+    name_pt: Tsar Treasures
+    api: "tsar-treasures"
+  - gameId: 1666445
+    name: 真爱巧克力
+    name_en: Chocolate Deluxe
+    name_pt: Chocolate Deluxe
+    api: "choc-deluxe"
+  - gameId: 1671262
+    name: 宝石矿工
+    name_en: Gemstones Gold
+    name_pt: Gemstones Gold
+    api: "gemstones-gold"
+  - gameId: 1682240
+    name: 快钱来了
+    name_en: Cash Mania
+    name_pt: Cash Mania
+    api: "cash-mania"
+  - gameId: 1695365
+    name: 金龙送宝
+    name_en: Fortune Dragon
+    name_pt: Fortune Dragon
+    api: "fortune-dragon"
+  - gameId: 1702123
+    name: 艺伎之刃
+    name_en: Geisha's Revenge
+    name_pt: Geisha's Revenge
+    api: "geisha-revenge"
+  - gameId: 1717688
+    name: 魔法药水
+    name_en: Mystic Potion
+    name_pt: Mystic Potion
+    api: "mystic-potions"
+  - gameId: 1727711
+    name: 三只疯狂小猪
+    name_en: Three Crazy Piggies
+    name_pt: Three Crazy Piggies
+    api: "three-cz-pigs"
+  - gameId: 1747549
+    name: 南美之翼
+    name_en: Wings of Iguazu
+    name_pt: Wings of Iguazu
+    api: "wings-iguazu"
+  - gameId: 1755623
+    name: 世界珍宝馆
+    name_en: Museum Wonders
+    name_pt: Museum Wonders
+    api: "museum-wonders"
+  - gameId: 1760238
+    name: 极道荣耀
+    name_en: Yakuza Honor
+    name_pt: Yakuza Honor
+    api: "yakuza-honor"
+  - gameId: 1778752
+    name: 热血足球
+    name_en: Futebol Fever
+    name_pt: Futebol Fever
+    api: "futebol-fever"
+  - gameId: 1786529
+    name: 里约嘉年华
+    name_en: Rio Fantasia
+    name_pt: Rio Fantasia
+    api: "rio-fantasia"
+  - gameId: 1799745
+    name: 宝藏大冒险
+    name_en: Mr. Treasure's Fortune
+    name_pt: Mr. Treasure's Fortune
+    api: "mr-treas-fort"
+  - gameId: 1804577
+    name: 街头涂鸦
+    name_en: Graffiti Rush
+    name_pt: Graffiti Rush
+    api: "graffiti-rush"
+  - gameId: 1815268
+    name: 美食夏日祭
+    name_en: Oishi Delights
+    name_pt: Oishi Delights
+    api: "oishi-delights"
+  - gameId: 1827457
+    name: 狂暴少女
+    name_en: Doomsday Rampage
+    name_pt: Doomsday Rampage
+    api: "doomsday-rampg"
+  - gameId: 1834850
+    name: 魔豆传奇
+    name_en: Jack the Giant Hunter
+    name_pt: Jack the Giant Hunter
+    api: "jack-giant-hunt"
+  - gameId: 1850016
+    name: 印加奇迹
+    name_en: Incan Wonders
+    name_pt: Incan Wonders
+    api: "incan-wonders"
+  - gameId: 1865521
+    name: 宝藏船说
+    name_en: Dead Man's Riches
+    name_pt: Dead Man's Riches
+    api: "dead-man-riches"
+  - gameId: 1879752
+    name: 金蛇招财
+    name_en: Fortune Snake
+    name_pt: Fortune Snake
+    api: "fortune-snake"
+  - gameId: 1881268
+    name: 拳击玫瑰
+    name_en: Knockout Riches
+    name_pt: Knockout Riches
+    api: "knockout-rich"
+  - gameId: 1897678
+    name: 寻龙宝藏
+    name_en: Dragon's Treasure Quest
+    name_pt: Dragon's Treasure Quest
+    api: "dragons-treas"
+  - gameId: 1903012
+    name: 格林赏金:糖果巫
+    name_en: "Grimms' Bounty: Hansel & Gretel"
+    name_pt: "Grimms' Bounty: Hansel & Gretel"
+    api: "grimm-bounty"
+  - gameId: 1918451
+    name: 银河宝藏
+    name_en: Galaxy Miner
+    name_pt: Galaxy Miner
+    api: "galaxy-miner"
+  - gameId: 1929177
+    name: 海怪传说
+    name_en: Kraken Gold Rush
+    name_pt: Kraken Gold Rush
+    api: "kraken-gold"
+  - gameId: 1935269
+    name: 汉堡大升级
+    name_en: Diner Frenzy Spins
+    name_pt: Diner Frenzy Spins
+    api: "diner-frenzy"
+  - gameId: 1940257
+    name: 芝麻开门
+    name_en: Alibaba's Cave of Fortune
+    name_pt: Alibaba's Cave of Fortune
+    api: "alibaba-cave"
+  - gameId: 1964781
+    name: 法老牌
+    name_en: Pharaoh Royals
+    name_pt: Pharaoh Royals
+    api: "pharaoh-royals"
+  - gameId: 1971587
+    name: 天竺王朝
+    name_en: Majestic Empire
+    name_pt: Majestic Empire
+    api: "majestic-emp"
+  - gameId: 2012025
+    name: 宝石热气球
+    name_en: Skylight Wonders
+    name_pt: Skylight Wonders
+    api: "skylight-wonder"

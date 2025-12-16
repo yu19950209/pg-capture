@@ -1,0 +1,33 @@
+{
+  "name": "red-capture",
+  "version": "1.0.0",
+  "description": "使用 Puppeteer 抓取网站并分析 session 和 token",
+  "main": "index.js",
+  "scripts": {
+    "pg": "ts-node pg-local.ts",
+    "check": "ts-node check.ts",
+    "remove-unfinished": "ts-node remove-unfinished.ts"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "decimal.js": "^10.6.0",
+    "fast-xml-parser": "^5.3.2",
+    "fs-extra": "^11.1.1",
+    "js-yaml": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.10.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "puppeteer",
+    "web-scraping",
+    "session",
+    "token"
+  ],
+  "author": "",
+  "license": "MIT"
+}
