@@ -37,7 +37,7 @@ function logError(msg?: any, ...args: any[]) {
 
 interface MongoData {
 	func: number;
-	data: string;
+	data: string[];
 	mul: number;
 }
 
@@ -54,7 +54,7 @@ function collectDocsFromFile(filePath: string, funcType: number, maxCount?: numb
 			if (parsed && (parsed.Exception || parsed.Message)) continue;
 			const mul = computeMul(parsed);
 			const doc: MongoData = {
-				data: JSON.stringify(parsed.data),
+				data: parsed.data.map((item: any) => JSON.stringify(item)),
 				mul,
 				func: funcType,
 			};
