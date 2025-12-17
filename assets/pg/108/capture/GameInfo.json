@@ -1,0 +1,133 @@
+{
+  "dt": {
+    "cs": [
+      0.1,
+      1,
+      10,
+      50
+    ],
+    "ml": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "mxl": 10,
+    "maxwm": null,
+    "wt": {
+      "mw": 5,
+      "bw": 20,
+      "mgw": 35,
+      "smgw": 50
+    },
+    "fb": {
+      "is": true,
+      "bm": 75,
+      "bms": null,
+      "t": 1
+    },
+    "gcs": {
+      "bf": {
+        "is": true,
+        "bm": 75,
+        "bms": null,
+        "t": 100
+      }
+    },
+    "bl": 0.99,
+    "inwe": false,
+    "iuwe": false,
+    "ls": {
+      "si": {
+        "s": 0,
+        "wp": null,
+        "lw": null,
+        "sw": null,
+        "scs": null,
+        "wpl": null,
+        "bwp": null,
+        "bwsc": null,
+        "es": {
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            4,
+            5,
+            6
+          ],
+          "3": [
+            8,
+            9
+          ]
+        },
+        "twbm": 0,
+        "orl": null,
+        "ix": false,
+        "sc": 0,
+        "gm": 1,
+        "bsc": null,
+        "lrs": null,
+        "rs": null,
+        "fs": null,
+        "acw": 0,
+        "gwt": 0,
+        "pmt": null,
+        "ab": null,
+        "ml": 10,
+        "cs": 0.1,
+        "rl": [
+          2,
+          1,
+          6,
+          6,
+          0,
+          0,
+          0,
+          2,
+          3,
+          3,
+          2,
+          7
+        ],
+        "ctw": 0,
+        "cwc": 0,
+        "fstc": null,
+        "pcwc": 0,
+        "rwsp": null,
+        "hashr": null,
+        "fb": null,
+        "sid": "0",
+        "psid": "0",
+        "st": 1,
+        "nst": 1,
+        "pf": 0,
+        "aw": 0,
+        "wid": 0,
+        "wt": "C",
+        "wk": "0_C",
+        "wbn": null,
+        "wfg": null,
+        "blb": 0,
+        "blab": 0,
+        "bl": 0.99,
+        "tb": 0,
+        "tbb": 0,
+        "tw": 0,
+        "np": 0,
+        "ocr": null,
+        "mr": null,
+        "ge": null
+      }
+    },
+    "cc": "THB"
+  },
+  "err": null
+}

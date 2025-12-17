@@ -17,6 +17,6 @@ export const CONCURRENT_GAMES = 10;
 // 每个游戏的并发采集实例数
 export const CONCURRENT_PER_GAME = 1;
 // 导入最大限制 0 为不限制
-export const IMPORT_LIMIT = 1000;
+export const IMPORT_LIMIT = 0;
 // 测试RTP
 export const TEST_RTP = true;

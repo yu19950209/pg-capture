@@ -1,0 +1,108 @@
+{
+  "dt": {
+    "oj": {
+      "jid": 1
+    },
+    "pid": "lDQuHvcwJp",
+    "pcd": "ttt8811d01_thb",
+    "tk": "42R2HXNV-18HG-34HR-2AB3-1V30I32E4W7V",
+    "st": 1,
+    "geu": "game-api/plushie-frenzy/",
+    "lau": "game-api/lobby/",
+    "bau": "web-api/game-proxy/",
+    "cc": "THB",
+    "cs": "฿",
+    "nkn": "ttt8811d01_thb",
+    "gm": [
+      {
+        "gid": 25,
+        "msdt": 1545696000000,
+        "medt": 1545714000000,
+        "st": 1,
+        "amsg": ""
+      }
+    ],
+    "uiogc": {
+      "bb": 1,
+      "gec": 1,
+      "cbu": 0,
+      "cl": 0,
+      "mr": 0,
+      "phtr": 0,
+      "vc": 0,
+      "il": 0,
+      "rp": 2,
+      "gc": 0,
+      "ign": 0,
+      "tsn": 0,
+      "we": 0,
+      "gsc": 0,
+      "bu": 0,
+      "pwr": 0,
+      "hd": 0,
+      "igv": 0,
+      "grt": 0,
+      "ivs": 1,
+      "ir": 0,
+      "hn": 1,
+      "grtp": 0,
+      "bf": 0,
+      "et": 0,
+      "np": 0,
+      "as": 1000,
+      "asc": 1,
+      "std": 0,
+      "hnp": 0,
+      "ts": 1,
+      "smpo": 0,
+      "swf": 0,
+      "sp": 0,
+      "rcf": 0,
+      "sbb": 0,
+      "hwl": 0,
+      "sfb": 0
+    },
+    "ec": [
+      {
+        "n": "c5869829a5",
+        "v": "7",
+        "il": 0,
+        "om": 0,
+        "uie": {
+          "tpu": "1"
+        }
+      }
+    ],
+    "occ": {
+      "rurl": "",
+      "tcm": "",
+      "tsc": 0,
+      "ttp": 0,
+      "tlb": "",
+      "trb": ""
+    },
+    "gcv": "3.6.0.8",
+    "ioph": "a953beb9f4ea",
+    "sdn": "api",
+    "eatk": "MABzkp5lra00IaGKBj4VDEExNaaK0PSkUTJrWuK/lLaJF3ubAWjr1M4CxesKNIvHn40mviS7G5RnteEPksP3/yAmba2zPnoveFY1YhwKoVKuPI/pHS0PN8TNe53A/ocn9j+Ios4dI++ac1OMXaxUOjt7aqZoU7STY9Z6NxB6/Cvr7+ZApSX8rfbc6LTA+fZT",
+    "jc": {
+      "grtp": 0,
+      "bf": 0,
+      "et": 0,
+      "np": 0,
+      "as": 1000,
+      "asc": 1,
+      "std": 0,
+      "hnp": 0,
+      "ts": 1,
+      "smpo": 0,
+      "swf": 0,
+      "sp": 0,
+      "rcf": 0,
+      "sbb": 0,
+      "hwl": 0,
+      "sfb": 0
+    }
+  },
+  "err": null
+}

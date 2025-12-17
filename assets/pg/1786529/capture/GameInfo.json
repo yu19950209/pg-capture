@@ -1,0 +1,109 @@
+{
+  "dt": {
+    "cs": [
+      0.2,
+      2,
+      20,
+      100
+    ],
+    "ml": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "mxl": 5,
+    "maxwm": 2000,
+    "wt": {
+      "mw": 5,
+      "bw": 20,
+      "mgw": 35,
+      "smgw": 50
+    },
+    "fb": null,
+    "gcs": {},
+    "bl": 0.99,
+    "inwe": false,
+    "iuwe": false,
+    "ls": {
+      "si": {
+        "wp": null,
+        "lw": null,
+        "gm": 20,
+        "igm": false,
+        "orl": [
+          2,
+          2,
+          6,
+          0,
+          0,
+          0,
+          3,
+          3,
+          7
+        ],
+        "es": {
+          "1": [
+            3,
+            4,
+            5
+          ]
+        },
+        "ifs": false,
+        "fst": false,
+        "gwt": 0,
+        "pmt": null,
+        "ab": null,
+        "ml": 10,
+        "cs": 0.2,
+        "rl": [
+          2,
+          2,
+          6,
+          0,
+          0,
+          0,
+          3,
+          3,
+          7
+        ],
+        "ctw": 0,
+        "cwc": 0,
+        "fstc": null,
+        "pcwc": 0,
+        "rwsp": null,
+        "hashr": null,
+        "fb": null,
+        "sid": "0",
+        "psid": "0",
+        "st": 1,
+        "nst": 1,
+        "pf": 0,
+        "aw": 0,
+        "wid": 0,
+        "wt": "C",
+        "wk": "0_C",
+        "wbn": null,
+        "wfg": null,
+        "blb": 0,
+        "blab": 0,
+        "bl": 0.99,
+        "tb": 0,
+        "tbb": 0,
+        "tw": 0,
+        "np": 0,
+        "ocr": null,
+        "mr": null,
+        "ge": null
+      }
+    },
+    "cc": "THB"
+  },
+  "err": null
+}

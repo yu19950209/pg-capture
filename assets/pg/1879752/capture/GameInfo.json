@@ -1,0 +1,122 @@
+{
+  "dt": {
+    "cs": [
+      0.1,
+      1,
+      10,
+      50
+    ],
+    "ml": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "mxl": 10,
+    "maxwm": 5000,
+    "wt": {
+      "mw": 5,
+      "bw": 20,
+      "mgw": 35,
+      "smgw": 50
+    },
+    "fb": null,
+    "gcs": {
+      "ab": {
+        "is": true,
+        "bm": 0,
+        "bms": [
+          1.5
+        ],
+        "t": 0
+      }
+    },
+    "bl": 0.99,
+    "inwe": false,
+    "iuwe": false,
+    "ls": {
+      "si": {
+        "wp": null,
+        "lw": null,
+        "irfs": false,
+        "itr": false,
+        "itff": false,
+        "it": false,
+        "ifsw": true,
+        "gm": 0,
+        "crtw": 0,
+        "imw": false,
+        "orl": [
+          2,
+          2,
+          2,
+          99,
+          0,
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          99
+        ],
+        "rcs": 0,
+        "gwt": 0,
+        "pmt": null,
+        "ab": null,
+        "ml": 10,
+        "cs": 0.1,
+        "rl": [
+          2,
+          2,
+          2,
+          99,
+          0,
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          99
+        ],
+        "ctw": 0,
+        "cwc": 0,
+        "fstc": null,
+        "pcwc": 0,
+        "rwsp": null,
+        "hashr": null,
+        "fb": null,
+        "sid": "0",
+        "psid": "0",
+        "st": 1,
+        "nst": 1,
+        "pf": 0,
+        "aw": 0,
+        "wid": 0,
+        "wt": "C",
+        "wk": "0_C",
+        "wbn": null,
+        "wfg": null,
+        "blb": 0,
+        "blab": 0,
+        "bl": 0.99,
+        "tb": 0,
+        "tbb": 0,
+        "tw": 0,
+        "np": 0,
+        "ocr": null,
+        "mr": null,
+        "ge": null
+      }
+    },
+    "cc": "THB"
+  },
+  "err": null
+}

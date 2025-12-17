@@ -1,0 +1,35 @@
+{
+  "dt": {
+    "rtp": {
+      "Default": {
+        "min": 97.15,
+        "max": 97.15
+      }
+    },
+    "grtpi": [
+      {
+        "gt": "Default",
+        "grtps": [
+          {
+            "t": "min",
+            "tphr": null,
+            "rtp": 97.15
+          },
+          {
+            "t": "max",
+            "tphr": null,
+            "rtp": 97.15
+          }
+        ]
+      }
+    ],
+    "ows": {
+      "itare": true,
+      "tart": 1,
+      "igare": true,
+      "gart": 2160
+    },
+    "jws": null
+  },
+  "err": null
+}
