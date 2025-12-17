@@ -159,28 +159,13 @@ class Session {
             // 更新 orderId
             this.orderId = result.nextOrderId;
 
-            // 计算倍数
-            const si = result.spinData?.dt?.si;
-            let mul = 0;
-            if (si) {
-                try {
-                    const cs = new Decimal(String(si.cs || 0).replace(/,/g, ''));
-                    const ml = new Decimal(String(si.ml || 0).replace(/,/g, ''));
-                    const bet = cs.mul(ml).mul(this.lines);
-                    const win = new Decimal(String(si.tw || 0).replace(/,/g, ''));
-                    mul = bet.gt(0) ? Number(win.div(bet).toFixed(2)) : 0;
-                } catch {
-                    mul = 0;
-                }
-            }
-
             // 生成文件名
             const joined = result.rawSpins.map(s => JSON.stringify(s)).join('\n');
             const file = crypto.createHash('md5').update(joined).digest('hex');
 
             // 写入文件
             const type = 0;
-            const record = { file, mul, type, data: result.rawSpins };
+            const record = { file, data: result.rawSpins };
             fs.appendFileSync(this.spinPath(type), JSON.stringify(record) + '\n', 'utf8');
             count++;
 

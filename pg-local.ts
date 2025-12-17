@@ -177,13 +177,9 @@ class Session {
 
             this.fileHashes.add(file);
 
-            // 计算倍数
-            const si = result.rawSpins[result.rawSpins.length - 1]?.dt?.si;
-            let mul = 0
-
             // 写入文件
             const type = 0;
-            const record = { file, mul, type, data: result.rawSpins };
+            const record = { file, data: result.rawSpins };
             fs.appendFileSync(this.spinPath(type), JSON.stringify(record) + '\n', 'utf8');
             count++;
 
