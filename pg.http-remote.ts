@@ -38,7 +38,7 @@ function appendHttp(lines: string[]) {
     } catch { }
 }
 
-function randomTraceId(): string {
+export function randomTraceId(): string {
     return Math.random().toString(16).slice(2, 10);
 }
 
@@ -144,7 +144,7 @@ export async function pgGetGameInfo(gameApi: string, token: string, gameInfoPath
             // 如果提供了路径，则写入文件
             if (gameInfoPath) {
                 try {
-                    fs.writeFileSync(gameInfoPath, JSON.stringify(gameInfo, null, 2), 'utf-8');
+                    fs.writeFileSync(gameInfoPath, JSON.stringify(data, null, 2), 'utf-8');
                 } catch { }
             }
 

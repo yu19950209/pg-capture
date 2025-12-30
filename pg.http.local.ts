@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs/promises';
 import { URL } from 'url';
 import { parsePGInit } from './pg.parse';
+import { randomTraceId } from './pg.http-remote';
 
 export const APP_ID = 'faketrans2';
 export const APP_SECRET = 'c21967e5-bd33-4a73-acbc-00da92a9cd92';
@@ -97,11 +98,40 @@ export async function localGetToken(gameId: string, controlRTP: number = 300): P
         // console.warn(`RTP 设置失败: ${e.message}`, gameId);
     }
 
+    for (let i = 2; i <= 4; i++) {
+        try {
+            const url = `https://localhost:8443/web-api/auth/session/v${i}/verifySession?traceId=${randomTraceId()}`;
+            const result = await axiosJson(
+                url,
+                {
+                    'accept': '*/*',
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'cookie': COOKIE
+                },
+                'POST',
+                `btt=1&vc=0&pf=2&l=en&gi=${gameId}&tk${token}&otk=abcd1234abcd123432531532111kkafa`
+            );
+            if(result.err) {
+                console.log(                `btt=1&vc=0&pf=2&l=en&gi=${gameId}&tk${token}&otk=abcd1234abcd123432531532111kkafa`);
+                continue;
+            }
+            console.log(`多版本验证 v${i} 成功:`, JSON.stringify(result));
+            break; // 成功后跳出循环
+        }
+        catch (error) {
+            if (i == 4) {
+                throw new Error(`多版本验证失败: ${gameId} ${error}`);
+            }
+        }
+    }
+
+
     return { token, userId, gameId };
 }
 
 // 获取本地环境的游戏配置（GameInfo）
-export async function localGetGameInfo(gameId: string, token: string) {
+export async function localGetGameInfo(gameId: string, token: string, gameInfoPath?: string) {
+
     const url = `https://localhost:8443/game-api/${gameId}/v2/GameInfo/Get`;
 
     const data = await axiosJson(
@@ -119,7 +149,16 @@ export async function localGetGameInfo(gameId: string, token: string) {
         throw new Error('GameInfo missing in response');
     }
 
-    return parsePGInit(data.dt);
+    const gameInfo = data.dt;
+
+    // 如果提供了路径，则写入文件
+    if (gameInfoPath) {
+        try {
+            fs.writeFile(gameInfoPath, JSON.stringify(data, null, 2), 'utf-8');
+        } catch { }
+    }
+
+    return parsePGInit(gameInfo);
 }
 
 export interface LocalSpinParams {
@@ -174,6 +213,8 @@ export async function localSpin(params: LocalSpinParams, delay: number = 200): P
         body += `&fb=${params.fb}`;
     }
 
+    console.log('Local Spin Start:', body);
+
     while (true) {
         const url = `https://localhost:8443/game-api/${params.gameId}/v2/Spin`;
 
@@ -187,6 +228,8 @@ export async function localSpin(params: LocalSpinParams, delay: number = 200): P
             'POST',
             body
         );
+
+        console.log('Local Spin Response:', JSON.stringify(data));
 
         await new Promise(resolve => setTimeout(resolve, delay));
 
@@ -206,11 +249,8 @@ export async function localSpin(params: LocalSpinParams, delay: number = 200): P
 
         rawSpins.push(data);
 
-        body = `id=${currentOrderId}&cs=${cs}&ml=${ml}&wk=${wk}&btt=1&atk=${params.token}&pf=2`;
-
         currentOrderId = si.sid;
 
-        // 后续 spin 不再携带 fb 参数
         body = `id=${currentOrderId}&cs=${cs}&ml=${ml}&wk=${wk}&btt=1&atk=${params.token}&pf=2`;
 
         // 检查回合是否结束
@@ -218,7 +258,7 @@ export async function localSpin(params: LocalSpinParams, delay: number = 200): P
             break;
         }
     }
-    
+
     const lastSpin = rawSpins[rawSpins.length - 1];
     return {
         rawSpins,

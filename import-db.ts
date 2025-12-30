@@ -99,7 +99,7 @@ async function importDB(gameIdParam: string | number): Promise<number> {
 	const gameDir = path.join(__dirname, 'assets', VENDOR, gameId);
 	// 默认直连本地 27017，无账号密码；允许以 MONGO_URI 覆盖
 	const mongoHost = process.env.MONGO_HOST || 'localhost';
-	const mongoPort = process.env.MONGO_PORT || '17017';
+	const mongoPort = process.env.MONGO_PORT || '27017';
 	const mongoUri = process.env.MONGO_URI || `mongodb://${mongoHost}:${mongoPort}`;
 
 	// 强制使用 VENDOR 作为数据库名

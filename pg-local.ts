@@ -78,7 +78,7 @@ class Session {
             this.localToken = localTokenRes.token;
 
             // 获取游戏配置
-            const gameInfo = await localGetGameInfo(`${this.gameMeta.gameId}`, this.localToken);
+            const gameInfo = await localGetGameInfo(`${this.gameMeta.gameId}`, this.localToken, this.gameInfoPath);
             this.lines = gameInfo.lines;
             this.hasBuyFeature = gameInfo.hasBuyFeature;
             this.buyOptions = gameInfo.buyOptions || [];
@@ -86,6 +86,7 @@ class Session {
             this.localMl = gameInfo.ml;
             return true;
         } catch (error) {
+            console.error(`初始化失败: ${this.gameMeta.gameId} ${error}`);  
             return false;
         }
     }
@@ -212,7 +213,7 @@ class Session {
                 let buyCountPerType = this.countSpinsByType(buyType);
 
                 let localOrderId = 0; // 本地环境的 orderId
-
+                await this.init();
                 while (buyCountPerType < BUY_LIMIT) {
                     let result: LocalSpinResult;
                     try {
@@ -287,7 +288,7 @@ class Session {
         // 写入完成标记
         const summary = `${count}|${buyCount}`;
         fs.writeFileSync(this.completePath, summary, 'utf8');
-        console.log(`采集完成: ${this.gameMeta.gameId}, 常规 ${count} 条, 购买 ${buyCount} 条`);
+        console.log(`采集完成: ${this.gameMeta.gameId}, 常规 ${count} 条, 购买 ${buyCount} 条`, this.hasBuyFeature, this.buyOptions.length);
     }
 }
 

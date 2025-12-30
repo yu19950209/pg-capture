@@ -28,7 +28,7 @@ const BASE_URL = 'https://api.zmcyu9ypy.com';
 const REFERER = 'https://m.zmcyu9ypy.com/';
 // 凭据：根据你的需求更新为有效值
 const COOKIE = 'aliyungf_tc=91330fe21146bc59c2ba663b3ec5c2768cafb93f4fc958faaef17bd2c5dffb08';
-const TK = '42R2HXNV-18HG-34HR-2AB3-1V30I32E4W7V';
+const TK = 'DI3X0F2R-OU34-34ZX-C4VR-YN232P218G28';
 const OTK = '772BBB7B-255E-4883-945C-4DA1A97D0A13';
 
 export type Argv = {
@@ -272,26 +272,26 @@ export async function collectForGame(
     //     writeJsonIfNeeded(files.resGetByRef, { error: String(e) }, true);
     // }
 
-    try {
-        const url = `${BASE_URL}/web-api/game-proxy/v2/GameUI/Get?traceId=${traceId()}`;
-        const body = form({ btt: 1, atk: curAtk, pf: 2, gid });
-        const res = await lf(url, { method: 'POST', headers: headers(), body });
-        const json = await safeJson(res);
-        writeJsonIfNeeded(files.ui, json, force);
-    } catch (e: any) {
-        writeJsonIfNeeded(files.ui, { error: String(e) }, true);
-    }
+    // try {
+    //     const url = `${BASE_URL}/web-api/game-proxy/v2/GameUI/Get?traceId=${traceId()}`;
+    //     const body = form({ btt: 1, atk: curAtk, pf: 2, gid });
+    //     const res = await lf(url, { method: 'POST', headers: headers(), body });
+    //     const json = await safeJson(res);
+    //     writeJsonIfNeeded(files.ui, json, force);
+    // } catch (e: any) {
+    //     writeJsonIfNeeded(files.ui, { error: String(e) }, true);
+    // }
 
 
-    try {
-        const url = `${BASE_URL}/web-api/game-proxy/v2/GameRule/Get?traceId=${traceId()}`;
-        const body = form({ btt: 1, gid, atk: curAtk, pf: 2 });
-        const res = await lf(url, { method: 'POST', headers: headers(), body });
-        const json = await safeJson(res);
-        writeJsonIfNeeded(files.rule, json, force);
-    } catch (e: any) {
-        writeJsonIfNeeded(files.rule, { error: String(e) }, true);
-    }
+    // try {
+    //     const url = `${BASE_URL}/web-api/game-proxy/v2/GameRule/Get?traceId=${traceId()}`;
+    //     const body = form({ btt: 1, gid, atk: curAtk, pf: 2 });
+    //     const res = await lf(url, { method: 'POST', headers: headers(), body });
+    //     const json = await safeJson(res);
+    //     writeJsonIfNeeded(files.rule, json, force);
+    // } catch (e: any) {
+    //     writeJsonIfNeeded(files.rule, { error: String(e) }, true);
+    // }
 }
 
 // 先抓取 HTML 页面，便于后续分析或注入
@@ -359,7 +359,7 @@ async function runCore(args: Argv) {
 
     for (const gid of gids) {
         const apiSlug = slugMap.get(gid);
-        const outDir = path.join(ASSETS_PG, String(gid), 'capture');
+        const outDir = path.join(ASSETS_PG, String(gid));
         if (args.clean) {
             try { fs.rmSync(outDir, { recursive: true, force: true }); } catch { }
         }

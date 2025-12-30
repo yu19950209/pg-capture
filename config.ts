@@ -13,7 +13,7 @@ export const SPIN_DELAY_MS = 200;
 // 每隔多少行输出一次进度
 export const LOG_INTERVAL = 20;
 // 并行采集的游戏数量
-export const CONCURRENT_GAMES = 10;
+export const CONCURRENT_GAMES = 1;
 // 每个游戏的并发采集实例数
 export const CONCURRENT_PER_GAME = 1;
 // 导入最大限制 0 为不限制
