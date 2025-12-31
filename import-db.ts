@@ -77,7 +77,7 @@ function computeMul(parsed: any): number {
 		const cs = new Decimal(siFirst?.cs ?? 0);
 		const ml = new Decimal(siFirst?.ml ?? 0);
 		const bet = cs.mul(ml);
-		const win = new Decimal(siLast?.tw ?? 0);
+		const win = new Decimal(siLast?.aw ?? 0);
 		if (bet.lte(0)) return 0;
 		const m = win.div(bet);
 		return m.isFinite() && !m.isNaN() ? m.toNumber() : 0;
