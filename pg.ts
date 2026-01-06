@@ -5,7 +5,7 @@ import yaml from 'js-yaml';
 import crypto from 'crypto';
 import Decimal from 'decimal.js';
 import { SPIN_LIMIT, BUY_LIMIT, RETRY_ATTEMPTS, RETRY_DELAY_MS, SPIN_DELAY_MS, LOG_INTERVAL, CONCURRENT_GAMES, CONCURRENT_PER_GAME } from './config';
-import { pgGetToken, pgGetGameInfo, pgSpin, PGSpinParams, PGSpinResult, setHttpLogFile } from './pg.http-remote';
+import { pgGetToken, pgGetGameInfo, pgSpin, PGSpinParams, PGSpinResult } from './pg.http-remote';
 
 interface PGGameMeta {
     gameId: number;
@@ -66,15 +66,25 @@ class Session {
 
         // 仅在第一次初始化时设置 HTTP 日志文件
         if (isFirstInit) {
-            setHttpLogFile(path.join(this.gameDir, 'http.log'));
+            // setHttpLogFile(path.join(this.gameDir, 'http.log'));
         }
 
         // 获取 token
-        const tokenRes = await pgGetToken(this.gameMeta.gameId);
-        this.token = tokenRes.token;
+        const token = await pgGetToken(this.gameMeta.gameId);
+
+        if(!token || token.trim() === '') {
+            throw new Error(`Failed to obtain token for gameId: ${this.gameMeta.gameId}`);
+        }
+
+        this.token  = token;
 
         // 获取游戏配置
-        const initRes = await pgGetGameInfo(this.gameMeta.api, this.token, this.gameInfoPath);
+        const initRes = await pgGetGameInfo(this.gameMeta.api, this.token);
+
+        if(!initRes) {
+            throw new Error(`Failed to obtain game info for gameId: ${this.gameMeta.gameId}`);
+        }
+
         this.lines = initRes.lines;
         this.hasBuyFeature = initRes.hasBuyFeature;
         this.buyOptions = initRes.buyOptions || [];
