@@ -23,7 +23,8 @@ export interface PGSpinResult {
 }
 
 
-const DEFAULT_HOST = 'api.8jkxzybcq.com';
+// const DEFAULT_HOST = 'api.8jkxzybcq.com';
+const DEFAULT_HOST = 'api.icgxzz3el.com';
 
 function createUrl(host: string, path: string): string {
 	return `https://${host}${path}`;
@@ -98,6 +99,7 @@ export async function pgGetToken(gameId: number): Promise<string | null> {
 	const host = DEFAULT_HOST;
 
 	try {
+
 		const result = await fetch(
 			createUrl(host, `/web-api/auth/session/v2/verifySession?traceId=${generateTraceId()}`),
 			{

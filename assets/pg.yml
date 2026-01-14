@@ -1,59 +1,4 @@
 games:
-  - gameId: 3
-    name: 横财来啦
-    name_en: Fortune Gods
-    name_pt: Fortune Gods
-    api: "fortune-gods"
-  - gameId: 7
-    name: "美杜莎: 雅典娜的诅咒"
-    name_en: "Medusa 1: The Curse of Athena"
-    name_pt: "Medusa 1: The Curse of Athena"
-    api: medusa
-  - gameId: 20
-    name: 亲爱的
-    name_en: Reel Love
-    name_pt: Reel Love
-    api: "reel-love"
-  - gameId: 25
-    name: 抓抓乐
-    name_en: Plushie Frenzy
-    name_pt: Plushie Frenzy
-    api: "plushie-frenzy"
-  - gameId: 29
-    name: 鱼跃龙门
-    name_en: Dragon Legend
-    name_pt: Dragon Legend
-    api: "dragon-legend"
-  - gameId: 33
-    name: 嘻哈熊猫
-    name_en: Hip Hop Panda
-    name_pt: Hip Hop Panda
-    api: "hip-hop-panda"
-  - gameId: 34
-    name: 后羿射日
-    name_en: Legend of Hou Yi
-    name_pt: Legend of Hou Yi
-    api: "legend-of-hou-yi"
-  - gameId: 35
-    name: 万胜狂欢夜
-    name_en: "Mr. Hallow-Jackpot!"
-    name_pt: "Mr. Hallow-Jackpot!"
-    api: "mr-hallow-jp"
-  - gameId: 36
-    name: 舞狮进宝
-    name_en: Prosperity Lion
-    name_pt: Prosperity Lion
-    api: "prosperity-lion"
-  - gameId: 37
-    name: 圣诞欢乐送
-    name_en: Santa's Gift Rush
-    name_pt: Santa's Gift Rush
-    api: "santas-gift-rush"
-  - gameId: 38
-    name: "宝石侠 - 大宝剑"
-    name_en: Gem Saviour Sword
-    name_pt: Gem Saviour Sword
-    api: "gem-saviour-sword"
   - gameId: 39
     name: 金猪报财
     name_en: Piggy Gold
@@ -69,21 +14,6 @@ games:
     name_en: Ganesha Gold
     name_pt: Ganesha Gold
     api: "ganesha-gold"
-  - gameId: 44
-    name: 皇上吉祥
-    name_en: Emperor's Favour
-    name_pt: Emperor's Favour
-    api: "emperors-favour"
-  - gameId: 48
-    name: 双囍临门
-    name_en: Double Fortune
-    name_pt: Double Fortune
-    api: "double-fortune"
-  - gameId: 50
-    name: 嘻游记
-    name_en: Journey to the Wealth
-    name_pt: Journey to the Wealth
-    api: "journey-to-the-wealth"
   - gameId: 53
     name: 冰雪大冲关
     name_en: The Great Icescape
@@ -114,26 +44,11 @@ games:
     name_en: Leprechaun Riches
     name_pt: Leprechaun Riches
     api: "leprechaun-riches"
-  - gameId: 61
-    name: 唐伯虎点秋香
-    name_en: Flirting Scholar
-    name_pt: Flirting Scholar
-    api: "flirting-scholar"
   - gameId: 62
     name: "宝石侠 - 宝藏征途"
     name_en: Gem Saviour Conquest
     name_pt: Gem Saviour Conquest
     api: "gem-saviour-conquest"
-  - gameId: 63
-    name: 龙虎争霸
-    name_en: Dragon Tiger Luck
-    name_pt: Dragon Tiger Luck
-    api: "dragon-tiger-luck"
-  - gameId: 64
-    name: 拳霸
-    name_en: Muay Thai Champion
-    name_pt: Muay Thai Champion
-    api: "muay-thai-champion"
   - gameId: 65
     name: 麻将胡了
     name_en: Mahjong Ways
@@ -154,21 +69,11 @@ games:
     name_en: Bikini Paradise
     name_pt: Bikini Paradise
     api: "bikini-paradise"
-  - gameId: 70
-    name: 糖果连连爆
-    name_en: Candy Burst
-    name_pt: Candy Burst
-    api: "candy-burst"
   - gameId: 71
     name: 赢财神
     name_en: Cai Shen Wins
     name_pt: Cai Shen Wins
     api: "cai-shen-wins"
-  - gameId: 73
-    name: 埃及探秘宝典
-    name_en: Egypt's Book of Mystery
-    name_pt: Egypt's Book of Mystery
-    api: "egypts-book-mystery"
   - gameId: 74
     name: 麻将胡了2
     name_en: Mahjong Ways 2
@@ -184,11 +89,6 @@ games:
     name_en: Dreams of Macau
     name_pt: Dreams of Macau
     api: "dreams-of-macau"
-  - gameId: 80
-    name: 欢乐嘉年华
-    name_en: Circus Delight
-    name_pt: Circus Delight
-    api: "circus-delight"
   - gameId: 82
     name: 凤凰传奇
     name_en: Phoenix Rises
@@ -199,11 +99,6 @@ games:
     name_en: Wild Fireworks
     name_pt: Wild Fireworks
     api: "wild-fireworks"
-  - gameId: 84
-    name: 赏金女王
-    name_en: Queen of Bounty
-    name_pt: Queen of Bounty
-    api: "queen-bounty"
   - gameId: 85
     name: 阿拉丁神灯
     name_en: Genie's 3 Wishes

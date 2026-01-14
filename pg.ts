@@ -91,6 +91,13 @@ class Session {
 
         // 重置 orderId
         this.orderId = 0;
+        // 保存 Init.json（用于记录完整的初始化响应）
+        try {
+            const initPath = path.join(this.gameDir, 'Init.json');
+            fs.writeFileSync(initPath, JSON.stringify(initRes, null, 2), 'utf8');
+        } catch (e: any) {
+            console.error(`写入 Init.json 失败: ${this.gameMeta.gameId} -> ${e && e.message ? e.message : String(e)}`);
+        }
     }
 
     private countSpins(pathFile: string): number {

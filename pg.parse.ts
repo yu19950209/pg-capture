@@ -35,7 +35,7 @@ export function parsePGInit(gameInfo: any): PGInitResult {
 
     // 检查购买功能
     if (gameInfo?.fb?.is) {
-        console.log('游戏支持购买功能', gameInfo.fb);
+        // console.log('游戏支持购买功能', gameInfo.fb);
         result.hasBuyFeature = true;
         // PG 的 fb.bm 可能是数字或数组
         // 如果是数字，转换为单元素数组

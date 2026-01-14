@@ -4,6 +4,7 @@ import { MongoClient } from 'mongodb';
 import Decimal from 'decimal.js';
 import yaml from 'js-yaml';
 import { IMPORT_LIMIT, TEST_RTP } from './config';
+import { parse } from 'path/posix';
 
 // 供应商常量（资源目录名与默认数据库前缀）
 const VENDOR = 'pg';
@@ -41,18 +42,37 @@ interface MongoData {
 	mul: number;
 }
 
+function readLinesFromInit(gameDir: string): number {
+	const initUpper = path.join(gameDir, 'Init.json');
+	const initLower = path.join(gameDir, 'init.json');
+	const initPath = fs.existsSync(initUpper) ? initUpper : (fs.existsSync(initLower) ? initLower : null);
+	if (!initPath) return 1;
+	try {
+		const raw = fs.readFileSync(initPath, 'utf8');
+		let doc: any = JSON.parse(raw);
+		// 兼容某些供应商 Init.json 可能是 ["{...}"] 这种数组包裹
+		if (Array.isArray(doc) && doc.length > 0 && typeof doc[0] === 'string') {
+			doc = JSON.parse(doc[0]);
+		}
+		const lines = Number(doc?.lines ?? doc?.raw?.mxl);
+		return Number.isFinite(lines) && lines > 0 ? lines : 1;
+	} catch {
+		return 1;
+	}
+}
+
 // 解析单个 JSONL 文件并构建文档列表（可设置最大条数限制）
-function collectDocsFromFile(filePath: string, funcType: number, maxCount?: number): MongoData[] {
+function collectDocsFromFile(filePath: string, funcType: number, initLines: number, maxCount?: number): MongoData[] {
 	const out: MongoData[] = [];
 	if (!fs.existsSync(filePath)) return out;
 	const raw = fs.readFileSync(filePath, 'utf8');
-	const lines = raw.split('\n');
-	for (const line of lines) {
+	const jsonlLines = raw.split('\n');
+	for (const line of jsonlLines) {
 		if (!line.trim()) continue;
 		try {
 			const parsed = JSON.parse(line);
 			if (parsed && (parsed.Exception || parsed.Message)) continue;
-			const mul = computeMul(parsed);
+			const mul = computeMul(parsed, initLines);
 			const doc: MongoData = {
 				data: JSON.stringify(parsed.data),
 				mul,
@@ -67,8 +87,8 @@ function collectDocsFromFile(filePath: string, funcType: number, maxCount?: numb
 	return out;
 }
 
-// 计算真实倍数的，仅返回倍数 mul（新格式：bet= data[0].dt.si.cs * ml，win= data[last].dt.si.tw）
-function computeMul(parsed: any): number {
+// 计算真实倍数的，仅返回倍数 mul（新格式：bet= cs * ml * lines，win= aw）
+function computeMul(parsed: any, lines: number): number {
 	try {
 		const arr = Array.isArray(parsed?.data) ? parsed.data : [];
 		if (arr.length === 0) return 0;
@@ -76,11 +96,11 @@ function computeMul(parsed: any): number {
 		const siLast = arr[arr.length - 1]?.dt?.si;
 		const cs = new Decimal(siFirst?.cs ?? 0);
 		const ml = new Decimal(siFirst?.ml ?? 0);
-		const bet = cs.mul(ml);
+		const bet = cs.mul(ml).mul(new Decimal(lines ?? 1));
 		const win = new Decimal(siLast?.aw ?? 0);
 		if (bet.lte(0)) return 0;
 		const m = win.div(bet);
-		return m.isFinite() && !m.isNaN() ? m.toNumber() : 0;
+		return parseFloat(m.toFixed(2));
 	} catch {
 		return 0;
 	}
@@ -97,6 +117,7 @@ function computeMul(parsed: any): number {
 async function importDB(gameIdParam: string | number): Promise<number> {
 	const gameId = String(gameIdParam);
 	const gameDir = path.join(__dirname, 'assets', VENDOR, gameId);
+	const initLines = readLinesFromInit(gameDir);
 	// 默认直连本地 27017，无账号密码；允许以 MONGO_URI 覆盖
 	const mongoHost = process.env.MONGO_HOST || 'localhost';
 	const mongoPort = process.env.MONGO_PORT || '27017';
@@ -122,7 +143,7 @@ async function importDB(gameIdParam: string | number): Promise<number> {
 		if (!fs.existsSync(file)) continue;
 		const remain = IMPORT_LIMIT ? Math.max(IMPORT_LIMIT - docs.length, 0) : undefined;
 		if (remain === 0) break;
-		const part = collectDocsFromFile(file, type, remain);
+		const part = collectDocsFromFile(file, type, initLines, remain);
 		docs.push(...part);
 		if (IMPORT_LIMIT && docs.length >= IMPORT_LIMIT) break;
 	}
@@ -135,7 +156,7 @@ async function importDB(gameIdParam: string | number): Promise<number> {
 			} catch (e) {
 				logWarn(`清空集合失败：${String(e)}`);
 			}
-			const BATCH_SIZE = 500;
+			const BATCH_SIZE = 1000;
 			let inserted = 0;
 			for (let i = 0; i < docs.length; i += BATCH_SIZE) {
 				const batch = docs.slice(i, i + BATCH_SIZE);

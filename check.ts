@@ -85,7 +85,7 @@ class PGSpinValidator {
 
 		this.stats.totalSpins += spins.length;
 
-		// 1) psid 一致性
+		// 0) psid 一致性
 		const firstPsid = spins[0].psid;
 		spins.forEach((spin: any, i: number) => {
 			if (spin.psid !== firstPsid) {
@@ -97,8 +97,15 @@ class PGSpinValidator {
 			}
 		});
 
-		// 2) 第一个 st 必须为 1
+		// 1) 第一个 st 必须为 1
 		const firstSpin = spins[0];
+		if (firstSpin.aw !== firstSpin.tw) {
+			this.log('error', game, fileName, `行${lineNum} spin[0]: 第一个 spin 的 aw 必须等于 tw (aw=${firstSpin.aw}, tw=${firstSpin.tw})`);
+			this.stats.stateErrors++;
+			this.invalidRecords.push({ game, fileName, lineNum, filePath });
+		}
+
+		// 2) 第一个 st 必须为 1
 		if (firstSpin.st !== 1) {
 			this.log('error', game, fileName, `行${lineNum} spin[0]: 第一个 spin 的 st 必须是 1，当前为 ${firstSpin.st}`);
 			this.stats.stateErrors++;
