@@ -42,7 +42,7 @@ export function parsePGInit(gameInfo: any): PGInitResult {
         const bm = gameInfo.fb.bm;
         if (Array.isArray(bm)) {
             result.buyOptions = bm;
-        } else if (bm !== null && bm !== undefined) {
+        } else if (bm !== null && bm !== undefined && bm != 100) {
             result.buyOptions = [{ si: bm }];
         } else {
             result.buyOptions = [];

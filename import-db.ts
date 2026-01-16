@@ -40,6 +40,7 @@ interface MongoData {
 	func: number;
 	data: string;
 	mul: number;
+	bet: number;
 }
 
 function readLinesFromInit(gameDir: string): number {
@@ -72,10 +73,11 @@ function collectDocsFromFile(filePath: string, funcType: number, initLines: numb
 		try {
 			const parsed = JSON.parse(line);
 			if (parsed && (parsed.Exception || parsed.Message)) continue;
-			const mul = computeMul(parsed, initLines);
+			const result = computeMul(parsed, initLines);
 			const doc: MongoData = {
 				data: JSON.stringify(parsed.data),
-				mul,
+				mul: result.mul,
+				bet: result.bet,
 				func: funcType,
 			};
 			out.push(doc);
@@ -88,21 +90,21 @@ function collectDocsFromFile(filePath: string, funcType: number, initLines: numb
 }
 
 // 计算真实倍数的，仅返回倍数 mul（新格式：bet= cs * ml * lines，win= aw）
-function computeMul(parsed: any, lines: number): number {
+function computeMul(parsed: any, lines: number): { mul: number, bet: number } {
 	try {
 		const arr = Array.isArray(parsed?.data) ? parsed.data : [];
-		if (arr.length === 0) return 0;
+		if (arr.length === 0) throw new Error('数据格式错误，缺少 data 数组');
 		const siFirst = arr[0]?.dt?.si;
 		const siLast = arr[arr.length - 1]?.dt?.si;
 		const cs = new Decimal(siFirst?.cs ?? 0);
 		const ml = new Decimal(siFirst?.ml ?? 0);
 		const bet = cs.mul(ml).mul(new Decimal(lines ?? 1));
 		const win = new Decimal(siLast?.aw ?? 0);
-		if (bet.lte(0)) return 0;
+		if (bet.lte(0)) throw new Error('投注金额计算为零');
 		const m = win.div(bet);
-		return parseFloat(m.toFixed(2));
+		return { mul: parseFloat(m.toFixed(2)), bet: parseFloat(bet.toFixed(2)) };
 	} catch {
-		return 0;
+		throw new Error('计算倍数失败');
 	}
 }
 

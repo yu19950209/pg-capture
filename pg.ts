@@ -72,16 +72,16 @@ class Session {
         // 获取 token
         const token = await pgGetToken(this.gameMeta.gameId);
 
-        if(!token || token.trim() === '') {
+        if (!token || token.trim() === '') {
             throw new Error(`Failed to obtain token for gameId: ${this.gameMeta.gameId}`);
         }
 
-        this.token  = token;
+        this.token = token;
 
         // 获取游戏配置
         const initRes = await pgGetGameInfo(this.gameMeta.api, this.token);
 
-        if(!initRes) {
+        if (!initRes) {
             throw new Error(`Failed to obtain game info for gameId: ${this.gameMeta.gameId}`);
         }
 
@@ -138,7 +138,7 @@ class Session {
             } catch (e: any) {
                 attempt++;
                 if (attempt >= RETRY_ATTEMPTS) throw e;
-                
+
                 // 如果是 token 过期错误，重新初始化
                 if (e.message && e.message.includes('Token expired')) {
                     await this.init();
@@ -197,14 +197,10 @@ class Session {
 
         // 购买采集（BUY 模式）
         if (this.hasBuyFeature && this.buyOptions.length > 0) {
+            console.log(`开始购买采集: ${this.gameMeta.gameId}`);
             for (let buyIdx = 0; buyIdx < this.buyOptions.length; buyIdx++) {
-                const buyOption = this.buyOptions[buyIdx];
                 const buyType = getTypeCode(buyIdx);
                 let buyCountPerType = this.countSpinsByType(buyType);
-
-                // 从 buyOption 中提取 fb 参数（通常是 buyOption 的某个字段）
-                // 根据实际 API 响应调整，这里假设 buyOption 有 id 或直接使用索引
-                const fbParam = buyOption?.si || String(buyIdx + 2); // PG 的购买参数通常是 '2', '3' 等
 
                 while (buyCountPerType < BUY_LIMIT) {
                     let result: PGSpinResult;
@@ -212,8 +208,7 @@ class Session {
                         const spinParams: PGSpinParams = {
                             gameApi: this.gameMeta.api,
                             token: this.token,
-                            orderId: this.orderId,
-                            fb: fbParam
+                            orderId: this.orderId
                         };
                         result = await this.withRetry(() => pgSpin(spinParams));
                     } catch (e: any) {
@@ -238,6 +233,10 @@ class Session {
                         } catch {
                             mul = 0;
                         }
+                    }
+
+                    if (!si.fs) {
+                        continue; // 无免费游戏，跳过
                     }
 
                     // 生成文件名
@@ -350,13 +349,13 @@ async function main() {
     const cfg = await loadPGConfig();
 
     const gameIdArg = args.gameId;
-    
+
     if (gameIdArg) {
         // 单游戏模式
-        const meta = cfg.games.find(g => 
-            String(g.gameId) === gameIdArg || 
-            g.name_en === gameIdArg || 
-            g.name === gameIdArg || 
+        const meta = cfg.games.find(g =>
+            String(g.gameId) === gameIdArg ||
+            g.name_en === gameIdArg ||
+            g.name === gameIdArg ||
             g.api === gameIdArg
         );
         if (!meta) {
@@ -367,7 +366,7 @@ async function main() {
     } else {
         // 批量模式
         console.log(`开始批量采集，共 ${cfg.games.length} 个游戏`);
-        
+
         const running: Promise<void>[] = [];
         for (const game of cfg.games) {
             if (!game || !game.gameId) continue;

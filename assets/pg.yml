@@ -39,11 +39,6 @@ games:
     name_en: Ninja vs Samurai
     name_pt: Ninja vs Samurai
     api: "ninja-vs-samurai"
-  - gameId: 60
-    name: 爱尔兰精灵
-    name_en: Leprechaun Riches
-    name_pt: Leprechaun Riches
-    api: "leprechaun-riches"
   - gameId: 62
     name: "宝石侠 - 宝藏征途"
     name_en: Gem Saviour Conquest
@@ -54,11 +49,6 @@ games:
     name_en: Mahjong Ways
     name_pt: Mahjong Ways
     api: "mahjong-ways"
-  - gameId: 67
-    name: 少林足球
-    name_en: Shaolin Soccer
-    name_pt: Shaolin Soccer
-    api: "shaolin-soccer"
   - gameId: 68
     name: 鼠鼠福福
     name_en: Fortune Mouse

@@ -182,6 +182,8 @@ export async function pgSpin(params: PGSpinParams): Promise<PGSpinResult> {
             token: params.token,
             orderId: currentOrderId,
         });
+
+		// console.log(`Spin 响应: ${JSON.stringify(spinData).slice(0, 200)}`);
 		
         validatePGResponse(spinData);
 
